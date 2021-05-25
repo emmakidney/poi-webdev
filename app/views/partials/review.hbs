@@ -1,0 +1,36 @@
+<div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+    <form class="uk-form-stacked uk-text-left" action="/review" method="POST">
+        <div class="uk-grid uk-grid-stack">
+            <div class="uk-width-1-2@m">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Enter review</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-stacked-text" type="text" name="review" placeholder="5 stars!" />
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-form-label">Recommend to a Friend?</div>
+                    <div class="uk-form-controls">
+                        <label><input class="uk-radio" type="radio" name="method" value="Would recommend" /> Yes </label><br/>
+                        <label><input class="uk-radio" type="radio" name="method" value="Would not recommend" /> No </label>
+                    </div>
+                </div>
+            </div>
+            <div class=" uk-width-1-2@m">
+                <div class="uk-margin uk-text-left">
+                    <div class="uk-form-label">Select Location</div>
+                    <div class="uk-form-controls ">
+                        {{#each locations }}
+                            <label>
+                                <input class="uk-radio" type="radio" name="location" value="{{location}}" /> {{location}} </label>
+                            <br/>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <button class="submit uk-button uk-button-primary uk-button-large uk-width-1-1">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

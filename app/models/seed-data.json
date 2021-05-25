@@ -1,0 +1,55 @@
+{
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret"
+    },
+    "marge": {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret"
+    },
+    "bart": {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret"
+    }
+},
+  "locations": {
+    "_model": "location",
+  "beach":
+    {
+      "location": "Main Beach"
+    },
+  "skate":
+     {
+      "location": "Skate Park"
+    }},
+
+  "reviews": {
+    "_model": "Review",
+    "one": {
+      "review": "Such a lovely spot for a good brisk walk with the dog with plenty of open space.",
+      "method": "Would Recommend",
+      "user": "->users.homer",
+      "location": "->locations.beach"
+    },
+    "two": {
+      "review": "Loads of lovely coffee shops along the promenade to visit.",
+      "method": "Would Recommend",
+      "user": "->users.marge",
+      "location": "->locations.beach"
+    },
+    "three": {
+      "review": "The skate park is garbage!",
+      "method": "Would Not Recommend",
+      "user": "->users.bart",
+      "location": "->locations.skate"
+    }
+  }
+}

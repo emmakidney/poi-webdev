@@ -1,0 +1,23 @@
+<div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+    <table class="uk-table">
+        <caption>
+            Reviews!
+        </caption>
+        <thead>
+        <th>Review</th>
+        <th> Location </th>
+        <th>Recommend to a Friend</th>
+        <th>Name</th>
+        </thead>
+        <tbody class="uk-text-left">
+        {{#each dashboard}}
+            <tr>
+                <td> {{review}} </td>
+                <td> {{location.location}}</td>
+                <td> {{method}} </td>
+                <td> {{user.firstName}} {{user.lastName}} </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
